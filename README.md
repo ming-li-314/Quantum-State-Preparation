@@ -34,3 +34,19 @@ This will be implemented recursively.
 
 The subproblem 2 can be solved iteratively by using multi-controlled phase gate to add the corresponding phase to each computational basis state. 
 
+### Implementation in the Jupyter notebook
+
+In the Jupyter notebook, I implement two functions to solve subproblem 1 and subproblem 2 separately. These two functions are combined to solve the full problem.
+
+I directly used multi-controlled $R_y$ gate and multi-controlled Phase gate from qiskit. This deviates from the requirement that only multi-controlled $R_z$ gate is allowed. I find it easier to use multi-controlled phase gate to directly adjust the phases in subproblem 2 than using multi-controlled $R_z$ gate because the latter will introduce global phases that need to be carefully removed. 
+
+
+
+### Analysis of Complexities and Resources
+For $n$ qubits and total $N= 2^n$ amplitudes.
+
+|Metric              |Complexity          |
+|--------------------|--------------------|
+|Number of Ancillas  |$0$              |
+|Gate Count          |$O(2^n\cdot n)$              |
+|Gate Depth          |$O(2^n \cdot n)$              |
