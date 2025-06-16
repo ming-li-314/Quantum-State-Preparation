@@ -12,7 +12,7 @@ The construction may use any number of ancillas, arbitrary 1-qubit gates and mul
 
 ## The Solution
 
-As explained in the lecture, the full problem can be divided into to sub problems. By noting that the complex amplitude can be written as magnitude times the phase $\Psi_x = |\Psi_x| e^{i\phi (x)}$, one has the two subproblems
+As explained in the lecture, the full problem can be divided into to sub problems. By noting that the complex amplitude can be written as the magnitude times the phase $\Psi_x = |\Psi_x| e^{i\phi (x)}$, one has the two subproblems
 
 ### subproblem 1: 
 $$ | |\Psi|\rangle = \sum_{x=0}^{2^n-1} |\Psi_x| |x\rangle _n $$
@@ -20,4 +20,12 @@ $$ | |\Psi|\rangle = \sum_{x=0}^{2^n-1} |\Psi_x| |x\rangle _n $$
 ### subproblem 2:
 $$ \tilde{U}_{\phi} |x\rangle = e^{i\phi(x)} |x\rangle $$
 
-One first construct the quantum state with positive real amplitudes and then adjust the corresponding phase for each computational basis state.
+One first constructs the quantum state with positive real amplitudes and then adjust the corresponding phase for each computational basis state.
+
+#### Solution to subproblem 1
+
+The subproblem 1 can be solved by recursion. For $n=1$,  $|\Psi > = a |0\rangle + b|1\rangle$, which can be obtained by applying the $R_y(\theta_0)$ gate on qubit $|0\rangle$ with $\theta_0 = 2\cos^{-1}{\left(a/\sqrt{a^2+b^2}\right)}$. 
+
+$$ |\Psi\rangle_{n+1} = |\Psi_0\rangle_n \left(\cos{(\theta_0/2)} |0\rangle \right) + |\Psi_1 \rangle_n \left(\sin{(\theta_0/2)}\right) $$
+
+If we denote the circuits to generate the quantum states $|\Psi_0\rangle$ and $|\Psi_1\rangle$ are $U_{\psi_0}$ and $U_{\psi_1}$, respectively. The circuit to generate the state $|\Psi\rangle_{n+1}$ can be schematically shown in the diagram.
