@@ -12,7 +12,7 @@ The construction may use any number of ancillas, arbitrary 1-qubit gates and mul
 
 ## The Solution
 
-As explained in the lecture, the full problem can be divided into to sub problems. By noting that the complex amplitude can be written as the magnitude times the phase $\Psi_x = |\Psi_x| e^{i\phi (x)}$, one has the two subproblems
+As explained in the lecture, the full problem can be divided into two subproblems. By noting that the complex amplitude can be written as the magnitude times the phase $\Psi_x = |\Psi_x| e^{i\phi (x)}$, one has the two subproblems
 
 ### subproblem 1: 
 $$ | |\Psi|\rangle = \sum_{x=0}^{2^n-1} |\Psi_x| |x\rangle _n $$
@@ -51,4 +51,4 @@ For $n$ qubits and total $N= 2^n$ amplitudes.
 |Gate Count          |$O(2^n\cdot n)$              |
 |Gate Depth          |$O(2^n \cdot n)$              |
 
-The complexity and resource analysis is dominated by the subproblem 2 when adjusting the phases for the $2^n$ state. 
+The complexity and resource analysis is dominated by the subproblem 2 in which one needs to adjust the phases for the $2^n$ computational basis state. 
