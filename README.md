@@ -1,6 +1,6 @@
 # Quantum-State-Preparation
 
-This is the second mini-project for the quantum computing course at the Erdos Institute
+This is the second mini-project for the quantum computing course at the Erdos Institute.
 
 ## The Problem
 
@@ -12,4 +12,12 @@ The construction may use any number of ancillas, arbitrary 1-qubit gates and mul
 
 ## The Solution
 
+As explained in the lecture, the full problem can be divided into to sub problems. By noting that the complex amplitude can be written as magnitude times the phase $\Psi_x = |\Psi_x| e^{i\phi (x)}$, one has the two subproblems
 
+### subproblem 1: 
+$$ | |\Psi|\rangle = \sum_{x=0}^{2^n-1} |\Psi_x| |x\rangle _n $$
+
+### subproblem 2:
+$$ \tilde{U}_{\phi} |x\rangle = e^{i\phi(x)} |x\rangle $$
+
+One first construct the quantum state with positive real amplitudes and then adjust the corresponding phase for each computational basis state.
