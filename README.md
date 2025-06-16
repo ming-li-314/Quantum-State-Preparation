@@ -50,3 +50,5 @@ For $n$ qubits and total $N= 2^n$ amplitudes.
 |Number of Ancillas  |$0$              |
 |Gate Count          |$O(2^n\cdot n)$              |
 |Gate Depth          |$O(2^n \cdot n)$              |
+
+The complexity and resource analysis is dominated by the subproblem 2 when adjusting the phases for the $2^n$ state. 
