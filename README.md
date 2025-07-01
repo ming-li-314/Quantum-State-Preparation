@@ -25,7 +25,7 @@ One first constructs the quantum state with positive real amplitudes and then ad
 
 The subproblem 1 can be solved by recursion. For $n=1$,  $|\Psi > = a |0\rangle + b|1\rangle$, which can be obtained by applying the $R_y(\theta_0)$ gate on qubit $|0\rangle$ with $\theta_0 = 2\cos^{-1}{\left(a/\sqrt{a^2+b^2}\right)}$. 
 
-$$ |\Psi\rangle_{n+1} = |\Psi_0\rangle_n \left(\cos{(\theta_0/2)} |0\rangle \right) + |\Psi_1 \rangle_n \left(\sin{(\theta_0/2)}\right) $$
+$$ |\Psi\rangle_{n+1} = |\Psi_0\rangle_n \left(\cos{(\theta_0/2)} |0\rangle \right) + |\Psi_1 \rangle_n \left(\sin{(\theta_0/2)} |1\rangle \right) $$
 
 If we denote the circuits to generate the quantum states $|\Psi_0\rangle$ and $|\Psi_1\rangle$ are $U_{\psi_0}$ and $U_{\psi_1}$, respectively. The circuit to generate the state $|\Psi\rangle_{n+1}$ can be schematically shown in the diagram. 
 <img src="https://github.com/user-attachments/assets/5ab5af93-9dba-4ae5-9bd8-f281c32716ce"  width="400" height="200" />
